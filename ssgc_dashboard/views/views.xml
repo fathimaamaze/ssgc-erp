@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="purchase_requisitions_tree_view_btn" model="ir.ui.view">
+            <field name="name">purchase_requisitions_tree_view_btn</field>
+            <field name="model">purchase.requisition</field>
+            <field name="inherit_id" ref="pragtech_purchase.purchase_requisitions_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="js_class">material_requisition</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="purchase_consumption_tree_view_btn" model="ir.ui.view">
+            <field name="name">purchase_consumption_tree_view_btn</field>
+            <field name="model">purchase.consumption</field>
+            <field name="inherit_id" ref="pragtech_purchase.purchase_consumption_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="js_class">material_consumption</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="labour_requisition_tree_btn" model="ir.ui.view">
+            <field name="name">labour_requisition_tree_btn</field>
+            <field name="model">labour.requisition</field>
+            <field name="inherit_id" ref="pragtech_contracting.labour_requisition_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="js_class">labour_requisition</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
